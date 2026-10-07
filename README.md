@@ -1,4 +1,4 @@
-# 🦓 ZooBeco — Classification multi-classes d'images d'animaux (CNN)
+# 🦓 ZooBeco — Classification multi-classes d'images d'animaux (CNN) avec Python
 
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-Keras-FF6F00?logo=tensorflow&logoColor=white)
