@@ -1,0 +1,162 @@
+#:kivy 2.3.0
+#:import C kivy.utils.get_color_from_hex
+
+<LoadingScreen>:
+    FloatLayout:
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'assets/images/background1.jpg'
+        
+        Image:
+            id: logo
+            source: 'assets/images/logo.png'
+            size_hint: 0.1, 0.1
+            pos_hint: {'center_x': 0.8, 'center_y': 0.8}
+            opacity: 0
+            allow_stretch: True
+            keep_ratio: True
+
+<WelcomeScreen>:
+    FloatLayout:
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'assets/images/background.jpg'
+        
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 0.9, 0.7
+            pos_hint: {'center_x': 0.5, 'center_y': 0.55}
+            spacing: 20
+            padding: 30
+            
+            Label:
+                text: 'BIENVENUE DANS'
+                font_size: '42sp'
+                bold: True
+                color: C('#FFFFFF')
+                halign: 'center'
+            
+            Label:
+                text: 'ZooBeco!'
+                font_size: '64sp'
+                bold: True
+                color: C('#F1C40F')
+                halign: 'center'
+                
+            Label:
+                text: 'Classifiez vos animaux en un clic'
+                font_size: '24sp'
+                italic: True
+                color: C('#ECF0F1')
+                halign: 'center'
+                
+        Button:
+            text: "COMMENCER L'EXPÉRIENCE"
+            font_size: '15sp'
+            size_hint: 0.7, 0.12
+            pos_hint: {'center_x': 0.5, 'center_y': 0.15}
+            background_color: C('#27AE60')
+            background_normal: ''
+            on_release:
+                root.manager.current = 'classification'
+
+<ClassificationScreen>:
+    FloatLayout:
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'assets/images/background9.jpg'
+        
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 20
+            spacing: 15
+            
+            Label:
+                text: 'ZooBeco - Classification'
+                font_size: '28sp'
+                bold: True
+                color: C('#ECF0F1')
+                size_hint_y: 0.1
+            
+            Image:
+                id: img_preview
+                source: ''
+                size_hint_y: 0.5
+                allow_stretch: True
+                keep_ratio: True
+                fit_mode: 'contain'
+            
+            BoxLayout:
+                size_hint_y: 0.15
+                spacing: 10
+                padding: 10
+                
+                Button:
+                    text: 'Ouvrir la galerie'
+                    background_color: C('#3498DB')
+                    background_normal: ''
+                    font_size: '18sp'
+                    on_release: root.select_image()
+                
+                Button:
+                    text: 'Analyser'
+                    background_color: C('#E67E22')
+                    background_normal: ''
+                    font_size: '18sp'
+                    on_release: root.classify_image()
+            
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: 0.25
+                spacing: 15
+                padding: [15, 10]
+                canvas.before:
+                    Color:
+                        rgba: C('#2C3E50CC')
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [20,]
+                
+                Label:
+                    text: 'RÉSULTATS'
+                    font_size: '26sp'
+                    bold: True
+                    color: C('#ECF0F1')
+                    size_hint_y: 0.4
+                
+                BoxLayout:
+                    orientation: 'vertical'
+                    spacing: 8
+                    
+                    Label:
+                        text: root.result_text
+                        font_size: '32sp'
+                        bold: True
+                        color: C('#2ECC71')
+                        text_size: self.width, None
+                        halign: 'center'
+                        valign: 'middle'
+                    
+                    Label:
+                        text: root.confidence_text
+                        font_size: '28sp'
+                        color: C('#F1C40F')
+                        text_size: self.width, None
+                        halign: 'center'
+                        valign: 'middle'
+                
+                Image:
+                    source: 'assets/images/loading.png'
+                    size_hint: None, None
+                    size: 50, 50
+                    pos_hint: {'center_x': 0.5}
+                    opacity: root.loading_visible
+                    anim_delay: 0.1
+                    anim_loop: 1

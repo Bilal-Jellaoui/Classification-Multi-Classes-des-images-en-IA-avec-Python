@@ -1,0 +1,4 @@
+tensorflow
+kivy
+pillow
+numpy
