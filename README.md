@@ -69,6 +69,22 @@ Input (224×224×3)
 | Époques | 20 max |
 | Callbacks | `EarlyStopping` (val_loss, patience = 5), `ModelCheckpoint` (meilleure val_accuracy) |
 
+## 💻 Code source
+
+Le code complet (préparation des données, entraînement, évaluation) est dans [`notebooks/`](notebooks/).
+
+<p align="center">
+  <img src="docs/training-results/code_source.png" width="750" alt="Imports et configuration du code source">
+</p>
+
+**Interprétation :** cette première cellule du notebook importe tous les outils du projet, organisés en trois groupes.
+
+- **Construction du modèle (Keras)** : `Sequential` empile les couches du CNN. `Conv2D` extrait les motifs visuels (contours, textures, rayures du zèbre), `MaxPool2D` réduit la taille des images en gardant l'essentiel, `Flatten` met les données à plat, `Dense` classe les images et `Dropout` limite le surapprentissage.
+- **Préparation des données** : `ImageDataGenerator` normalise les images et génère des variantes (rotation, zoom, retournement) pendant l'entraînement. `load_img` charge les images, et `os` parcourt les dossiers `train`, `validation` et `test`.
+- **Évaluation et visualisation** : `confusion_matrix` (scikit-learn) mesure les erreurs entre classes, `matplotlib` et `seaborn` tracent les courbes d'apprentissage et la matrice de confusion, `pandas` et `numpy` gèrent les tableaux de résultats, et `plot_model` dessine le schéma de l'architecture.
+
+Le modèle est un **réseau séquentiel** : il est simple à lire, à modifier et à expliquer, et suffisant pour une classification d'images standard à une seule entrée.
+
 ## 📊 Résultats
 
 | Métrique | Valeur |
