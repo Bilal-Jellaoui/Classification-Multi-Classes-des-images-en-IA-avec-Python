@@ -23,7 +23,7 @@
 
 | Logo | Accueil | Analyse | Résultat : Zèbre | Résultat : « Inconnu » |
 |:---:|:---:|:---:|:---:|:---:|
-| <img src="docs/screenshots/Logo.png" width="160"> | <img src="docs/screenshots/accueil.png" width="160"> | <img src="docs/screenshots/analyse.png" width="160"> | <img src="docs/screenshots/resultat_zebre.png" width="160"> | <img src="docs/screenshots/inconnu_lion.png" width="160"> |
+| <img src="docs/screenshots/1) logo de l'application.png" width="160"> | <img src="docs/screenshots/accueil.png" width="160"> | <img src="docs/screenshots/analyse.png" width="160"> | <img src="docs/screenshots/resultat_zebre.png" width="160"> | <img src="docs/screenshots/inconnu_lion.png" width="160"> |
 
 *Le lion ne fait pas partie des 6 classes : le modèle répond 62,16 % de confiance, sous le seuil de 70 %, et l'application affiche « Inconnu » au lieu d'inventer une réponse.*
 
