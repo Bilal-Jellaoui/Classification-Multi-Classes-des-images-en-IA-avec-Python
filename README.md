@@ -21,9 +21,9 @@
 
 ## 📸 Aperçu de l'application
 
-| Accueil | Analyse | Résultat : Zèbre | Résultat : « Inconnu » |
-|:---:|:---:|:---:|:---:|
-| <img src="docs/screenshots/accueil.png" width="160"> | <img src="docs/screenshots/analyse.png" width="160"> | <img src="docs/screenshots/resultat_zebre.png" width="160"> | <img src="docs/screenshots/inconnu_lion.png" width="160"> |
+| Logo | Accueil | Analyse | Résultat : Zèbre | Résultat : « Inconnu » |
+|:---:|:---:|:---:|:---:|:---:|
+| <img src="docs/screenshots/Logo.png" width="160"> | <img src="docs/screenshots/accueil.png" width="160"> | <img src="docs/screenshots/analyse.png" width="160"> | <img src="docs/screenshots/resultat_zebre.png" width="160"> | <img src="docs/screenshots/inconnu_lion.png" width="160"> |
 
 *Le lion ne fait pas partie des 6 classes : le modèle répond 62,16 % de confiance, sous le seuil de 70 %, et l'application affiche « Inconnu » au lieu d'inventer une réponse.*
 
@@ -147,7 +147,7 @@ Deep Learning (CNN) · TensorFlow / Keras · Data augmentation · Évaluation de
 
 ## 👥 Auteurs
 
-**Bilal Jellaoui** · [GitHub](https://github.com/Bilal-Jellaoui) · [LinkedIn](https://www.linkedin.com/in/TON-PROFIL) · ton-email@exemple.com
+**Bilal Jellaoui** · [GitHub](https://github.com/Bilal-Jellaoui) · [LinkedIn](https://www.linkedin.com/in/bilal-jellaoui-381594170) · bilaljellaoui@gmail.com
 **Oussama Bouffi**
 
 Projet de fin d'études — Filière Sciences Mathématiques et Informatique (SMI), Faculté des Sciences de Kénitra, Université Ibn Tofaïl · Année 2024–2025
