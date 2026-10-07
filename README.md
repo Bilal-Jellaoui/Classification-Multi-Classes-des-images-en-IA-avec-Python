@@ -167,4 +167,4 @@ Deep Learning (CNN) · TensorFlow / Keras · Data augmentation · Évaluation de
 **Oussama Bouffi**
 
 Projet de fin d'études — Filière Sciences Mathématiques et Informatique (SMI), Faculté des Sciences de Kénitra, Université Ibn Tofaïl · Année 2024–2025
-Encadrante : Mme Khadija Louzaoui · Encadrant universitaire : Pr. Mohamed Amnai
+Encadrante : Pr. LOUZAOUI Khadija · Examinateur : Pr. BENLHACHMI Khalid
